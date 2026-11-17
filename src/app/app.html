@@ -1,65 +1,28 @@
-<app-control-flow></app-control-flow>
+<h1>Switch | Control Flow Statement</h1>
 
-
-
-
-
-
-<!-- <h1>Control Flow Statement</h1>
-
-<div>
-    @if(isLogin()){
-        <span>Welcome, User</span><br />
-        <button (click) = "handleLogin(false)">Login</button>
-    }
-    @else{
-        <span>Please Login</span><br />
-        <button (click) = "handleLogin(true)">Login</button>
-    }
-</div>
-
-<hr />
-
-
-
-<h1>Toggle</h1>
-@if(show()){
-    <button (click) = "show.set(false)">Hide</button>
-}
-
-@else{
-    <button (click) = "show.set(true)">Show</button>
-}
-
-
-
-
-<hr />
-<h1>Check Status</h1>
-<select (change) = "handleStatus($event)" name="" id="">
-    <option value="notstarted">Not Started</option>
-    <option value="progress">In Progress</option>
+<select (change)="handleSwitch($event)" name="" id="">
+    <option value="notStarted">Not Started</option>
+    <option value="loading">Loading in Progress</option>
     <option value="success">Success</option>
-    <option value="error">Error</option>
+    <option value="error">Error Or Option</option>
 </select>
-
 <br />
-@if(status() === 'notStarted'){
-    <span>No status</span>
-}
+<br />
 
-@else if(status() === "progress"){
-    <span style="color:  orange">In Progress</span>
-}
+@switch(status()){
+    @case('notStarted'){
+        <span>No Update Yet </span>
+    }
 
-@else if(status() === "success"){
-    <span style="color:  green">Success</span>
-}
+    @case('loading'){
+        <span style="color: orange;">Loading in progress </span>
+    }
 
-@else if (status() === "error"){
-    <span style="color:  red">Error</span>
-}
+    @case('success'){
+        <span style="color: green;">Success </span>
+    }
 
-@else{
-    <span>Unknown Status</span>
-} -->
+    @default(){
+        <span style="color: red;">Error </span>
+    }
+}

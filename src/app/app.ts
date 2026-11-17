@@ -10,16 +10,9 @@ import { ControlFlow } from './control-flow/control-flow';
   templateUrl: './app.html',
 })
 export class App {
-  // isLogin = signal(false);
-  // show = signal(true)
-  // status = signal('error')
-
-  // handleLogin(status:boolean){
-  //   this.isLogin.set(status)
-  // }
-
-  // handleStatus(event : Event){
-  //   let target =  event.target as HTMLSelectElement;
-  //   this.status.set(target.value)
-  // }
+  status = signal("not Started")
+  handleSwitch(event:Event){
+    const target = event.target as HTMLSelectElement
+    this.status.set(target.value)
+  }
 }

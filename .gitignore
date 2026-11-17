@@ -17,6 +17,11 @@ yarn-error.log
 /src/app/effect/*
 /src/app/data-type-signals/*
 /src/app/counter-app-signals/*
+/src/app/css-rules/*
+/src/app/get-set-using-signals/*
+/src/app/user-data/*
+/src/app/admin-data/*
+/src/app/control-flow/*
 
 
 # IDEs and editors
